@@ -14,6 +14,7 @@ body {
   }
 
   h2 {
+    font-style: italic;
     font-size: 1.5em;
   }
 
@@ -28,5 +29,11 @@ body {
   }
 
   a:hover {
+    color: green;
     text-decoration: none;
+  }
+  .contact-information {
+    background-color: #eeeeee;
+    border: 5px solid purple;
+    padding: 5px
   }
