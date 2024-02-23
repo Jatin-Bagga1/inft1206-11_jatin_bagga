@@ -7,5 +7,15 @@ div{
     margin: auto; /* This property will centers the div */
     text-align: center; /* This property centers the text horizontally */
     line-height: 300px; /* This property centers the text vertically in div */
-    
+    font-size: 1.12rem; /* I set the font size to be 1.12 rem and checked on developer's tool and it was 17.92 px. */
+    background-color: red;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-radius: 20px;
+    border: 1px solid darkred;
+    /* background gradient */
+    background-image: linear-gradient(to right bottom ,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0.2));
 }  
