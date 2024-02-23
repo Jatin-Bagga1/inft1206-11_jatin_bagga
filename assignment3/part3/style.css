@@ -63,9 +63,31 @@ header, footer {
 
 html {
   font-family: 'LT SOUL' , serif , monospace;
-  font-size: medium;
+  font-size: 10px;
 }
 
 h1, h2 {
   font-family: 'VOGUE', sans-serif , monospace;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+
+}
+
+p , li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  word-spacing: 2px;
+}
+
+section h2 + p {
+  text-indent: 20px;
 }
