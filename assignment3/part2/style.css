@@ -1,4 +1,11 @@
 html {
     font-family: sans-serif;
   }
-  
+div{
+    width: 300px;
+    height: 300px;
+    margin: auto; /* This property will centers the div */
+    text-align: center; /* This property centers the text horizontally */
+    line-height: 300px; /* This property centers the text vertically in div */
+    
+}  
