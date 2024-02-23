@@ -43,3 +43,29 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+@font-face {
+  font-family: 'LT SOUL';
+  src: url(Fonts/LT_SOUL/LTSoul-Regular.otf) format("opentype");
+  src: url(Fonts/LT_SOUL/LTSoul-Bold.otf) format("opentype") ,
+   url(Fonts/LT_SOUL/LTSoul-Medium.otf) format("opentype") ,
+   url(Fonts/LT_SOUL/LTSoul-SemiBold.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VOGUE';
+  src: url(Fonts/vogue/Vogue.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'LT SOUL' , serif , monospace;
+  font-size: medium;
+}
+
+h1, h2 {
+  font-family: 'VOGUE', sans-serif , monospace;
+}
