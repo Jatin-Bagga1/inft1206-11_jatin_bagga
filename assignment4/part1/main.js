@@ -41,7 +41,7 @@ function result() {
     const yItem = randomValueFromArray(insertY);
     const zItem = randomValueFromArray(insertZ);
 
-    newStory = newStory.replace(':insertx:',xItem);
+    newStory = newStory.replaceAll(':insertx:',xItem);
     newStory = newStory.replace(':inserty:',yItem);
     newStory = newStory.replace(':insertz:',zItem);
 
@@ -58,8 +58,9 @@ function result() {
         newStory = newStory.replace('94 fahrenheit', temperature);
     }
 
-    story.textContent = ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
+
 
 
