@@ -14,10 +14,15 @@ const alternativeTextArray = ['Closeup of a human eye', 'A beautifull landscape'
 
 
 /* Looping through images */
-
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
+for( let i = 0; i < imageArray.length; i++ )
+{
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/' + imageArray[i]);
+    newImage.setAttribute('alt', alternativeTextArray[i]);
+    thumbBar.appendChild(newImage);
+    newImage.addEventListener('click', (e) => {
+        displayedImage.src = e.target.src;
+    });
+}
 
 /* Wiring up the Darken/Lighten button */
