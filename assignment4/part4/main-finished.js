@@ -25,7 +25,7 @@ class Shape {
     this.y = y;
     this.velX = velX;
     this.velY = velY;
-    this.exists = true
+    
   }
    
 }
@@ -35,6 +35,7 @@ class Ball extends Shape {
     super(x,y,velX,velY);
     this.color = color;
     this.size = size;
+    this.exists = true
     
   }
 
@@ -87,28 +88,24 @@ class EvilCircle extends Shape{
     super(x,y,20,20);
     this.color = 'white';
     this.size = 10;
-  }
-  
-  setControls()
-  {
-    window.addEventListener("keydown", (e) => {
-      switch (e.key) {
-        case "a":
+    window.addEventListener('keydown', (e) => {
+      switch(e.key) {
+        case 'a':
           this.x -= this.velX;
           break;
-        case "d":
+        case 'd':
           this.x += this.velX;
           break;
-        case "w":
+        case 'w':
           this.y -= this.velY;
           break;
-        case "s":
+        case 's':
           this.y += this.velY;
           break;
       }
     });
-    
   }
+
 
   draw() {
     ctx.beginPath();
@@ -171,17 +168,34 @@ while (balls.length < 25) {
   balls.push(ball);
 }
 
-function loop() {
+let evilcircle = new EvilCircle(
+  random(0,width),
+  random(0,height)
+)
+
+function evilloop() {
+
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
   for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+    if(ball.exists)
+    {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
+    
   }
 
-  requestAnimationFrame(loop);
+  evilcircle.draw();
+  evilcircle.checkBounds();
+  evilcircle.collisionDetect();
+
+  requestAnimationFrame(evilloop);
 }
 
-loop();
+evilloop();
+
+
+
