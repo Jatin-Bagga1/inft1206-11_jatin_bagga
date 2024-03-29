@@ -3,6 +3,11 @@
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
+let count = 0;
+
+var element = document.getElementById("mypara");
+
+
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
@@ -143,6 +148,8 @@ class EvilCircle extends Shape{
   
           if (distance < this.size + ball.size) {
             ball.exists = false;
+            count--;
+            element.innerHTML = 'Ball count: ' + count;
           }
         }
       }
@@ -166,6 +173,10 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
+  count++;
+  element.innerHTML = 'Ball count: ' + count;
+  
+
 }
 
 let evilcircle = new EvilCircle(
