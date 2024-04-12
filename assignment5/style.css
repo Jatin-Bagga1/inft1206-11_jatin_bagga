@@ -51,8 +51,9 @@ p, li, table {
 
 /* || header layout */
 
+/* When i ran the html file the background colour was green and it makes website content difficult to watch, therefore i changed the backgorud color to white. */
 nav, article, footer, .secondary {
-  background-color: green;
+  background-color: white;
 }
 
 article, footer, .secondary {
